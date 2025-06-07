@@ -9,3 +9,13 @@ const lavori = {
   frontend: { nome: "Frontend Development", prezzo: 15.3 },
   analysis: { nome: "Project Analysis", prezzo: 33.6 },
 };
+// Codici promozionali validi
+const codiciValidi = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+
+// Generiamo dinamicamente le opzioni per il select
+for (let key in lavori) {
+  const option = document.createElement("option");
+  option.value = key;
+  option.textContent = lavori[key].nome;
+  select.appendChild(option);
+}
