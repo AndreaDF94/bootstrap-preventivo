@@ -30,3 +30,11 @@ form.addEventListener("submit", function (e) {
     prezzoFinale.textContent = "Seleziona un tipo di lavoro.";
     return;
   }
+    // Calcolo prezzo base = prezzo orario * 10 ore
+  let prezzoBase = lavori[tipo].prezzo * 10;
+  let sconto = codiciValidi.includes(codice) ? 0.25 : 0;
+
+  // Applico eventuale sconto
+  const prezzoScontato = prezzoBase * (1 - sconto);
+  prezzoFinale.textContent = `€ ${prezzoScontato.toFixed(2)}`;
+});
