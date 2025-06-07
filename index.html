@@ -23,3 +23,33 @@
    <!-- MAIN: contenuto principale con container Bootstrap -->
   <main class="container my-5">
     <div class="row">
+      <!-- COLONNA SINISTRA: form -->
+      <div class="col-lg-8">
+        <h2>Richiesta Preventivo</h2>
+        <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+        <form id="quote-form">
+          <!-- Campo nome -->
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" id="nome" class="form-control" required />
+          </div>
+          <!-- Campo cognome -->
+          <div class="mb-3">
+            <label for="cognome" class="form-label">Cognome</label>
+            <input type="text" id="cognome" class="form-control" required />
+          </div>
+          <!-- Campo email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required />
+          </div>
+          <!-- Select dinamica per tipo di lavoro -->
+          <div class="mb-3">
+            <label for="job-type" class="form-label">Tipo di Lavoro</label>
+            <select id="job-type" class="form-select" required></select>
+          </div>
+          <!-- Textarea -->
+          <div class="mb-3">
+            <label for="descrizione" class="form-label">Descrizione</label>
+            <textarea id="descrizione" class="form-control"></textarea>
+          </div>
