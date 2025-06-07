@@ -19,3 +19,14 @@ for (let key in lavori) {
   option.textContent = lavori[key].nome;
   select.appendChild(option);
 }
+// Calcolo del preventivo al submit del form
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // Previene il comportamento predefinito (refresh pagina)
+
+  const tipo = select.value;
+  const codice = promoInput.value.trim().toUpperCase();
+
+  if (!tipo) {
+    prezzoFinale.textContent = "Seleziona un tipo di lavoro.";
+    return;
+  }
